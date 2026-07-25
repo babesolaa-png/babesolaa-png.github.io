@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Imad Notes | FBISE 10th Class Chemistry</title>
+<title>Imad Notes | 10th Class Chemistry</title>
 
 <style>
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -21,10 +25,11 @@ body {
     font-family: Arial, sans-serif;
     background: #f5f7fb;
     color: #172033;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* HEADER */
+
 header {
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: white;
@@ -41,7 +46,8 @@ header p {
     font-size: 17px;
 }
 
-/* NAV */
+/* NAVIGATION */
+
 nav {
     background: white;
     padding: 15px;
@@ -60,6 +66,7 @@ nav a {
 }
 
 /* HERO */
+
 .hero {
     background: white;
     text-align: center;
@@ -76,12 +83,13 @@ nav a {
 }
 
 .hero p {
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
     color: #667085;
 }
 
 /* SEARCH */
+
 .search {
     text-align: center;
     padding: 30px 20px;
@@ -97,6 +105,7 @@ nav a {
 }
 
 /* MAIN */
+
 .container {
     max-width: 1100px;
     margin: auto;
@@ -115,7 +124,8 @@ nav a {
     margin-bottom: 35px;
 }
 
-/* CHAPTER GRID */
+/* CHAPTERS */
+
 .chapters {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -160,7 +170,8 @@ nav a {
     cursor: pointer;
 }
 
-/* NOTES AREA */
+/* NOTES */
+
 .notes-area {
     display: none;
     background: white;
@@ -176,25 +187,51 @@ nav a {
 
 .notes-area h2 {
     color: #2563eb;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .notes-area h3 {
-    margin-top: 25px;
-    margin-bottom: 10px;
+    color: #172033;
+    margin-top: 30px;
+    margin-bottom: 12px;
 }
 
 .notes-area p {
     margin-bottom: 12px;
 }
 
-.notes-area ul {
+.notes-area ul,
+.notes-area ol {
     margin-left: 25px;
     margin-bottom: 20px;
 }
 
+.notes-area li {
+    margin-bottom: 7px;
+}
+
+.formula {
+    background: #eef4ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.question {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.answer {
+    color: #2563eb;
+    font-weight: bold;
+}
+
 .back-button {
-    margin-top: 25px;
+    margin-top: 30px;
     padding: 11px 18px;
     background: #111827;
     color: white;
@@ -204,6 +241,7 @@ nav a {
 }
 
 /* ABOUT */
+
 .about {
     background: #111827;
     color: white;
@@ -218,6 +256,7 @@ nav a {
 }
 
 /* FOOTER */
+
 footer {
     background: #0b1120;
     color: white;
@@ -230,6 +269,7 @@ footer span {
 }
 
 /* MOBILE */
+
 @media(max-width:600px) {
 
     header h1 {
@@ -248,446 +288,1497 @@ footer span {
         font-size: 13px;
         margin: 0 4px;
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
-    <h1>📚 Imad Notes</h1>
-    <p>FBISE 10th Class Chemistry Notes</p>
+
+<h1>📚 Imad Notes</h1>
+
+<p>10th Class Chemistry — FBISE Study Notes</p>
+
 </header>
 
+
 <nav>
-    <a href="#home">Home</a>
-    <a href="#chapters">Chapters</a>
-    <a href="#about">About</a>
+
+<a href="#home">Home</a>
+
+<a href="#chapters">Chapters</a>
+
+<a href="#about">About</a>
+
 </nav>
+
 
 <section class="hero" id="home">
 
-    <h2>10th Class <span>Chemistry Notes</span></h2>
+<h2>10th Class <span>Chemistry Notes</span></h2>
 
-    <p>
-        Welcome to Imad Notes. Explore chapter-wise Chemistry
-        study material for FBISE 10th Class students.
-    </p>
+<p>
+
+Welcome to Imad Notes — a student-friendly educational website
+for 10th Class Chemistry. Select a chapter below to study
+chapter-wise notes and exam preparation material.
+
+</p>
 
 </section>
 
+
 <div class="search">
 
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="🔍 Search a chapter..."
-        onkeyup="searchChapters()"
-    >
+<input
+
+type="text"
+
+id="searchInput"
+
+placeholder="🔍 Search Chemistry chapter..."
+
+onkeyup="searchChapters()"
+
+>
 
 </div>
 
+
 <main class="container" id="chapters">
 
-    <h2 class="title">🧪 Chemistry Chapters</h2>
 
-    <p class="subtitle">
-        FBISE 10th Class — Select a chapter to view notes.
-    </p>
+<h2 class="title">
 
-    <div class="chapters">
+🧪 Chemistry Chapters
 
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 01</div>
-            <h3>History of Chemistry</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(1)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 02</div>
-            <h3>Matter</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(2)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 03</div>
-            <h3>Stoichiometry</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(3)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 04</div>
-            <h3>Electrochemistry</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(4)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 05</div>
-            <h3>Reaction Kinetics</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(5)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 06</div>
-            <h3>Salts</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(6)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 07</div>
-            <h3>Nitrogen, Sulphur and Metals</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(7)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 08</div>
-            <h3>Organic Chemistry</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(8)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 09</div>
-            <h3>Hydrocarbons</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(9)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 10</div>
-            <h3>Hydroxy Compounds</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(10)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 11</div>
-            <h3>Carboxylic Compounds</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(11)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 12</div>
-            <h3>Polymers</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(12)">View Notes</button>
-        </div>
-
-        <div class="chapter-card">
-            <div class="chapter-number">CHAPTER 13</div>
-            <h3>Biochemistry</h3>
-            <p>Explore notes, concepts and exam preparation material.</p>
-            <button onclick="openChapter(13)">View Notes</button>
-        </div>
-
-    </div>
+</h2>
 
 
-    <!-- NOTES DISPLAY -->
+<p class="subtitle">
 
-    <div id="notesArea" class="notes-area">
+Select a chapter to open its notes.
 
-        <h2 id="notesTitle"></h2>
+</p>
 
-        <div id="notesContent"></div>
 
-        <button class="back-button" onclick="closeNotes()">
-            ← Back to Chapters
-        </button>
+<div class="chapters">
 
-    </div>
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 01
+
+</div>
+
+<h3>
+
+History of Chemistry
+
+</h3>
+
+<p>
+
+History, scientific inquiry and development of chemistry.
+
+</p>
+
+<button onclick="openChapter(1)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 02
+
+</div>
+
+<h3>
+
+Matter
+
+</h3>
+
+<p>
+
+Study the fundamental concepts related to matter.
+
+</p>
+
+<button onclick="openChapter(2)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 03
+
+</div>
+
+<h3>
+
+Stoichiometry
+
+</h3>
+
+<p>
+
+Moles, molar mass and quantitative chemical calculations.
+
+</p>
+
+<button onclick="openChapter(3)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 04
+
+</div>
+
+<h3>
+
+Electrochemistry
+
+</h3>
+
+<p>
+
+Important concepts of electrochemistry.
+
+</p>
+
+<button onclick="openChapter(4)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 05
+
+</div>
+
+<h3>
+
+Reaction Kinetics
+
+</h3>
+
+<p>
+
+Study factors affecting chemical reaction rates.
+
+</p>
+
+<button onclick="openChapter(5)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 06
+
+</div>
+
+<h3>
+
+Salts
+
+</h3>
+
+<p>
+
+Important concepts and properties of salts.
+
+</p>
+
+<button onclick="openChapter(6)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 07
+
+</div>
+
+<h3>
+
+Nitrogen, Sulphur and Metals
+
+</h3>
+
+<p>
+
+Study important elements and their compounds.
+
+</p>
+
+<button onclick="openChapter(7)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 08
+
+</div>
+
+<h3>
+
+Organic Chemistry
+
+</h3>
+
+<p>
+
+Introduction to carbon compounds and organic chemistry.
+
+</p>
+
+<button onclick="openChapter(8)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 09
+
+</div>
+
+<h3>
+
+Hydrocarbons
+
+</h3>
+
+<p>
+
+Study hydrocarbons and their important reactions.
+
+</p>
+
+<button onclick="openChapter(9)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 10
+
+</div>
+
+<h3>
+
+Hydroxy Compounds
+
+</h3>
+
+<p>
+
+Study important hydroxy compounds.
+
+</p>
+
+<button onclick="openChapter(10)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 11
+
+</div>
+
+<h3>
+
+Carboxylic Compounds
+
+</h3>
+
+<p>
+
+Study carboxylic acids and related compounds.
+
+</p>
+
+<button onclick="openChapter(11)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 12
+
+</div>
+
+<h3>
+
+Polymers
+
+</h3>
+
+<p>
+
+Study polymer formation and applications.
+
+</p>
+
+<button onclick="openChapter(12)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+
+CHAPTER 13
+
+</div>
+
+<h3>
+
+Biochemistry
+
+</h3>
+
+<p>
+
+Study important biochemical substances.
+
+</p>
+
+<button onclick="openChapter(13)">
+
+View Notes
+
+</button>
+
+</div>
+
+
+</div>
+
+
+<div id="notesArea" class="notes-area">
+
+<h2 id="notesTitle"></h2>
+
+<div id="notesContent"></div>
+
+<button class="back-button" onclick="closeNotes()">
+
+← Back to Chapters
+
+</button>
+
+</div>
+
 
 </main>
 
 
 <section class="about" id="about">
 
-    <h2>About Imad Notes</h2>
+<h2>
 
-    <p>
-        Imad Notes is an educational platform created and managed by Imad.
-        Our goal is to provide students with easy-to-understand,
-        original and exam-focused study resources.
-    </p>
+About Imad Notes
+
+</h2>
+
+<p>
+
+Imad Notes is an educational platform created and managed by Imad.
+The goal is to provide students with simple and useful study resources.
+
+</p>
 
 </section>
 
 
 <footer>
 
-    <p>
-        © 2026 <span>Imad Notes</span>. All Rights Reserved.
-    </p>
+<p>
 
-    <p>
-        Website Owner: Imad
-    </p>
+© 2026 <span>Imad Notes</span>. All Rights Reserved.
+
+</p>
+
+<p>
+
+Website Owner: Imad
+
+</p>
 
 </footer>
 
 
 <script>
 
-/* CHAPTER DATA */
 
 const chapters = {
 
-1: 1: {
-    title: "Chapter 1: History of Chemistry",
-    content: `
-        <h3>📖 Introduction</h3>
 
-        <p>
-        Chemistry is the branch of science that deals with the study of
-        matter, its composition, properties, structure and the changes it
-        undergoes. The development of chemistry has taken place over a long
-        period of human history through observations, experiments and the
-        development of scientific ideas.
-        </p>
+1: {
 
-        <h3>🔬 Scientific Inquiry</h3>
+title: "Chapter 1: History of Chemistry",
 
-        <p>
-        Scientific inquiry is a systematic way of investigating questions
-        about the natural world. Scientists observe phenomena, ask questions,
-        develop explanations, test those explanations through experiments,
-        collect evidence and communicate their findings.
-        </p>
+content: `
 
-        <h3>🧠 Scientific Paradigm</h3>
+<h3>📖 Introduction</h3>
 
-        <p>
-        A scientific paradigm is a commonly accepted framework or model that
-        scientists use to understand and explain natural phenomena. Scientific
-        paradigms may change when new evidence provides a better explanation.
-        </p>
+<p>
 
-        <h3>⚗️ Development of Chemistry</h3>
+Chemistry is the branch of science that studies matter,
+its composition, structure, properties and the changes
+that matter undergoes.
 
-        <p>
-        The development of chemistry was influenced by many practical
-        activities. Ancient people used chemical processes in activities such
-        as cooking, metalworking, glass making, fermentation and the production
-        of dyes.
-        </p>
+</p>
 
-        <h3>🧪 Alchemy and Chemistry</h3>
 
-        <p>
-        Alchemy was an early tradition that contributed to the development of
-        chemistry. Alchemists investigated substances and developed laboratory
-        techniques and equipment. Although many ideas of alchemy were later
-        rejected, some of its experimental practices contributed to the growth
-        of modern chemistry.
-        </p>
+<h3>🔬 Scientific Inquiry</h3>
 
-        <h3>⚖️ Law of Conservation of Mass</h3>
+<p>
 
-        <p>
-        The law of conservation of mass states that matter is neither created
-        nor destroyed during a chemical reaction carried out in a closed system.
-        Therefore, the total mass of the reactants is equal to the total mass
-        of the products.
-        </p>
+Scientific inquiry is a systematic process used to investigate
+questions about the natural world. It involves observation,
+questioning, evidence, reasoning and testing.
 
-        <p><b>In simple words:</b></p>
+</p>
 
-        <p>
-        Mass of reactants = Mass of products
-        </p>
 
-        <h3>⚡ Conservation of Energy</h3>
+<h3>🧠 Scientific Paradigm</h3>
 
-        <p>
-        The law of conservation of energy states that energy cannot be created
-        or destroyed. It can only be transferred from one form to another.
-        </p>
+<p>
 
-        <h3>🔁 Repeatability</h3>
+A scientific paradigm is a theoretical framework or model
+used to explain how nature works. Scientific paradigms may
+change when new evidence provides a better explanation.
 
-        <p>
-        Repeatability means that the same experiment can be repeated under the
-        same conditions and produce consistent results.
-        </p>
+</p>
 
-        <h3>🔄 Reproducibility</h3>
 
-        <p>
-        Reproducibility means that consistent results can be obtained when an
-        experiment is independently performed by other researchers or using
-        different equipment or laboratories.
-        </p>
+<h3>⚗️ Development of Chemistry</h3>
 
-        <h3>📌 Important Points</h3>
+<p>
 
-        <ul>
-            <li>Chemistry is the study of matter and its changes.</li>
-            <li>Scientific inquiry is based on observation, evidence and testing.</li>
-            <li>Scientific ideas can change when new evidence becomes available.</li>
-            <li>Alchemy contributed some experimental techniques to the development of chemistry.</li>
-            <li>Mass is conserved in a chemical reaction in a closed system.</li>
-            <li>Energy can change from one form to another but cannot be destroyed.</li>
-            <li>Repeatability involves repeating an experiment under the same conditions.</li>
-            <li>Reproducibility involves obtaining consistent results independently.</li>
-        </ul>
+The development of chemistry occurred over a long period.
+Early humans used chemical processes in everyday activities
+such as cooking, metalworking, glass making, fermentation
+and preparation of dyes.
 
-        <h3>📝 Short Questions</h3>
+</p>
 
-        <p><b>Q1. What is chemistry?</b></p>
-        <p>
-        Chemistry is the branch of science that studies matter, its
-        composition, properties, structure and the changes it undergoes.
-        </p>
 
-        <p><b>Q2. What is scientific inquiry?</b></p>
-        <p>
-        Scientific inquiry is a systematic process in which scientists
-        investigate questions about the natural world using observations,
-        experiments and evidence.
-        </p>
+<h3>🧪 Alchemy</h3>
 
-        <p><b>Q3. What is a scientific paradigm?</b></p>
-        <p>
-        A scientific paradigm is a framework or model used by scientists
-        to understand and explain natural phenomena.
-        </p>
+<p>
 
-        <p><b>Q4. State the law of conservation of mass.</b></p>
-        <p>
-        Matter is neither created nor destroyed during a chemical reaction
-        in a closed system. The total mass of reactants equals the total
-        mass of products.
-        </p>
+Alchemy was an early tradition that contributed to the
+development of chemistry. Alchemists studied substances
+and developed laboratory techniques and equipment.
+Although many alchemical ideas were later rejected,
+some experimental practices influenced modern chemistry.
 
-        <p><b>Q5. What is repeatability?</b></p>
-        <p>
-        Repeatability is the ability to obtain consistent results when the
-        same experiment is repeated under the same conditions.
-        </p>
+</p>
 
-        <p><b>Q6. What is reproducibility?</b></p>
-        <p>
-        Reproducibility is the ability to obtain consistent results when
-        an experiment is independently performed by other researchers.
-        </p>
 
-        <h3>❓ MCQs</h3>
+<h3>⚖️ Conservation of Mass</h3>
 
-        <p><b>1. Chemistry is mainly the study of:</b></p>
-        <p>
-        A) Stars &nbsp; B) Matter and its changes &nbsp; C) Planets &nbsp; D) Weather
-        </p>
+<p>
 
-        <p><b>Answer:</b> B) Matter and its changes</p>
+The law of conservation of mass states that in a chemical
+reaction carried out in a closed system, matter is neither
+created nor destroyed.
 
-        <p><b>2. Which principle states that matter is not created or destroyed in a chemical reaction?</b></p>
-        <p>
-        A) Conservation of mass &nbsp; B) Gravity &nbsp; C) Relativity &nbsp; D) Evolution
-        </p>
+</p>
 
-        <p><b>Answer:</b> A) Conservation of mass</p>
+<div class="formula">
 
-        <p><b>3. Repeatability means:</b></p>
-        <p>
-        A) Changing an experiment every time<br>
-        B) Repeating an experiment under the same conditions<br>
-        C) Avoiding experiments<br>
-        D) Ignoring results
-        </p>
+Mass of Reactants = Mass of Products
 
-        <p><b>Answer:</b> B) Repeating an experiment under the same conditions</p>
+</div>
 
-        <p><b>4. Energy can be:</b></p>
-        <p>
-        A) Created from nothing<br>
-        B) Destroyed completely<br>
-        C) Transferred or converted from one form to another<br>
-        D) Removed from the universe
-        </p>
 
-        <p><b>Answer:</b> C) Transferred or converted from one form to another</p>
+<h3>⚡ Conservation of Energy</h3>
 
-        <h3>🎯 Quick Revision</h3>
+<p>
 
-        <ul>
-            <li>Study of matter → Chemistry</li>
-            <li>Systematic investigation → Scientific inquiry</li>
-            <li>Accepted scientific framework → Scientific paradigm</li>
-            <li>Matter conserved in closed chemical systems → Conservation of mass</li>
-            <li>Energy changes form but is not destroyed → Conservation of energy</li>
-            <li>Same experiment, same conditions → Repeatability</li>
-            <li>Independent researchers obtain consistent results → Reproducibility</li>
-        </ul>
-    `
+Energy cannot be created or destroyed. It can be transferred
+or converted from one form into another.
+
+</p>
+
+
+<h3>🔁 Repeatability</h3>
+
+<p>
+
+Repeatability means obtaining consistent results when the
+same experiment is repeated under the same conditions.
+
+</p>
+
+
+<h3>🔄 Reproducibility</h3>
+
+<p>
+
+Reproducibility means obtaining consistent results when
+an experiment is independently performed by other researchers
+or laboratories.
+
+</p>
+
+
+<h3>📌 Important Points</h3>
+
+<ul>
+
+<li>Chemistry studies matter and its changes.</li>
+
+<li>Scientific inquiry uses observation, evidence and reasoning.</li>
+
+<li>Scientific paradigms can change when new evidence appears.</li>
+
+<li>Alchemy contributed to the historical development of chemistry.</li>
+
+<li>Mass is conserved in a chemical reaction in a closed system.</li>
+
+<li>Energy can change form but cannot be destroyed.</li>
+
+<li>Repeatability involves repeating an experiment under the same conditions.</li>
+
+<li>Reproducibility involves independent confirmation of results.</li>
+
+</ul>
+
+
+<h3>📝 Short Questions</h3>
+
+
+<div class="question">
+
+<b>Q1. What is chemistry?</b>
+
+<p>
+
+Chemistry is the branch of science that studies matter,
+its composition, properties, structure and the changes it undergoes.
+
+</p>
+
+</div>
+
+
+<div class="question">
+
+<b>Q2. What is scientific inquiry?</b>
+
+<p>
+
+Scientific inquiry is a systematic process of investigating
+questions about the natural world using observations,
+experiments and evidence.
+
+</p>
+
+</div>
+
+
+<div class="question">
+
+<b>Q3. What is a scientific paradigm?</b>
+
+<p>
+
+A scientific paradigm is a theoretical framework or model
+used to understand and explain natural phenomena.
+
+</p>
+
+</div>
+
+
+<div class="question">
+
+<b>Q4. State the law of conservation of mass.</b>
+
+<p>
+
+Matter is neither created nor destroyed during a chemical
+reaction in a closed system. Therefore, the total mass of
+reactants equals the total mass of products.
+
+</p>
+
+</div>
+
+
+<div class="question">
+
+<b>Q5. What is repeatability?</b>
+
+<p>
+
+Repeatability is the ability to obtain consistent results
+when the same experiment is repeated under the same conditions.
+
+</p>
+
+</div>
+
+
+<div class="question">
+
+<b>Q6. What is reproducibility?</b>
+
+<p>
+
+Reproducibility is the ability to obtain consistent results
+when an experiment is independently performed by other researchers.
+
+</p>
+
+</div>
+
+
+<h3>❓ MCQs</h3>
+
+
+<div class="question">
+
+<b>1. Chemistry mainly deals with the study of:</b>
+
+<p>
+
+A) Stars<br>
+
+B) Matter and its changes<br>
+
+C) Planets<br>
+
+D) Weather
+
+</p>
+
+<p class="answer">
+
+Answer: B) Matter and its changes
+
+</p>
+
+</div>
+
+
+<div class="question">
+
+<b>2. Which principle states that matter is not created or destroyed during a chemical reaction?</b>
+
+<p>
+
+A) Conservation of mass<br>
+
+B) Gravity<br>
+
+C) Relativity<br>
+
+D) Evolution
+
+</p>
+
+<p class="answer">
+
+Answer: A) Conservation of mass
+
+</p>
+
+</div>
+
+
+<div class="question">
+
+<b>3. Repeatability means:</b>
+
+<p>
+
+A) Changing an experiment every time<br>
+
+B) Repeating an experiment under the same conditions<br>
+
+C) Avoiding experiments<br>
+
+D) Ignoring results
+
+</p>
+
+<p class="answer">
+
+Answer: B) Repeating an experiment under the same conditions
+
+</p>
+
+</div>
+
+
+<h3>🎯 Quick Revision</h3>
+
+<ul>
+
+<li>Study of matter → Chemistry</li>
+
+<li>Systematic investigation → Scientific inquiry</li>
+
+<li>Theoretical framework → Scientific paradigm</li>
+
+<li>Mass conserved in closed system → Conservation of mass</li>
+
+<li>Energy changes form → Conservation of energy</li>
+
+<li>Same conditions and repeated experiment → Repeatability</li>
+
+<li>Independent confirmation → Reproducibility</li>
+
+</ul>
+
+`
+
 },
+
 
 2: {
-    title: "Chapter 2: Matter",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Matter will be added here.</p>`
+
+title: "Chapter 2: Matter",
+
+content: `
+
+<h3>📖 Introduction</h3>
+
+<p>
+
+Matter is anything that has mass and occupies space.
+Matter exists in different forms and can undergo physical
+and chemical changes.
+
+</p>
+
+
+<h3>🧊 Solid</h3>
+
+<ul>
+
+<li>Has a definite shape.</li>
+
+<li>Has a definite volume.</li>
+
+<li>Particles are closely packed.</li>
+
+<li>Particles vibrate around fixed positions.</li>
+
+</ul>
+
+
+<h3>💧 Liquid</h3>
+
+<ul>
+
+<li>Has a definite volume.</li>
+
+<li>Does not have a definite shape.</li>
+
+<li>Takes the shape of its container.</li>
+
+<li>Particles can move past one another.</li>
+
+</ul>
+
+
+<h3>💨 Gas</h3>
+
+<ul>
+
+<li>Has no definite shape.</li>
+
+<li>Has no definite volume.</li>
+
+<li>Particles are far apart.</li>
+
+<li>Can be compressed easily.</li>
+
+</ul>
+
+
+<h3>📌 Density</h3>
+
+<p>
+
+Density is the mass contained in a unit volume of a substance.
+
+</p>
+
+<div class="formula">
+
+Density = Mass ÷ Volume
+
+</div>
+
+
+<h3>📝 Short Question</h3>
+
+<div class="question">
+
+<b>Q. Define matter.</b>
+
+<p>
+
+Matter is anything that has mass and occupies space.
+
+</p>
+
+</div>
+
+
+<h3>🎯 Quick Revision</h3>
+
+<ul>
+
+<li>Solid → fixed shape and fixed volume.</li>
+
+<li>Liquid → fixed volume but no fixed shape.</li>
+
+<li>Gas → no fixed shape and no fixed volume.</li>
+
+<li>Gases are highly compressible.</li>
+
+</ul>
+
+`
+
 },
+
 
 3: {
-    title: "Chapter 3: Stoichiometry",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Stoichiometry will be added here.</p>`
+
+title: "Chapter 3: Stoichiometry",
+
+content: `
+
+<h3>📖 Introduction</h3>
+
+<p>
+
+Stoichiometry is the quantitative study of the amounts
+of reactants and products involved in chemical reactions.
+
+</p>
+
+
+<h3>⚖️ Balanced Chemical Equation</h3>
+
+<p>
+
+A balanced chemical equation contains equal numbers of
+atoms of each element on both sides of the equation.
+
+</p>
+
+
+<div class="formula">
+
+2H₂ + O₂ → 2H₂O
+
+</div>
+
+
+<h3>🔢 Mole</h3>
+
+<p>
+
+The mole is a unit used to express the amount of a substance.
+One mole contains approximately 6.022 × 10²³ particles.
+
+</p>
+
+
+<h3>⚖️ Molar Mass</h3>
+
+<p>
+
+Molar mass is the mass of one mole of a substance.
+It is commonly expressed in grams per mole (g/mol).
+
+</p>
+
+
+<h3>🧮 Important Formula</h3>
+
+<div class="formula">
+
+Number of Moles = Mass ÷ Molar Mass
+
+</div>
+
+
+<h3>🔢 Mole Ratio</h3>
+
+<p>
+
+The coefficients in a balanced chemical equation represent
+the mole ratio between reactants and products.
+
+</p>
+
+
+<p>
+
+For:
+
+</p>
+
+<div class="formula">
+
+2H₂ + O₂ → 2H₂O
+
+</div>
+
+
+<ul>
+
+<li>H₂ : O₂ = 2 : 1</li>
+
+<li>O₂ : H₂O = 1 : 2</li>
+
+<li>H₂ : H₂O = 2 : 2 = 1 : 1</li>
+
+</ul>
+
+
+<h3>🧮 Steps for Stoichiometric Calculations</h3>
+
+<ol>
+
+<li>Write the chemical equation.</li>
+
+<li>Balance the equation.</li>
+
+<li>Convert the given quantity into moles if required.</li>
+
+<li>Use the mole ratio from the balanced equation.</li>
+
+<li>Convert the final answer into the required unit.</li>
+
+</ol>
+
+
+<h3>📝 Short Questions</h3>
+
+
+<div class="question">
+
+<b>Q1. What is stoichiometry?</b>
+
+<p>
+
+Stoichiometry is the quantitative study of the amounts
+of reactants and products involved in chemical reactions.
+
+</p>
+
+</div>
+
+
+<div class="question">
+
+<b>Q2. Why is balancing a chemical equation important?</b>
+
+<p>
+
+A chemical equation must be balanced so that the number
+of atoms of each element is equal on both sides and the
+correct stoichiometric ratios can be determined.
+
+</p>
+
+</div>
+
+
+<div class="question">
+
+<b>Q3. What is molar mass?</b>
+
+<p>
+
+Molar mass is the mass of one mole of a substance,
+usually expressed in grams per mole.
+
+</p>
+
+</div>
+
+
+<h3>🎯 Quick Revision</h3>
+
+<ul>
+
+<li>Stoichiometry → quantitative study of chemical reactions.</li>
+
+<li>Balanced equation → equal atoms on both sides.</li>
+
+<li>One mole → approximately 6.022 × 10²³ particles.</li>
+
+<li>Moles = Mass ÷ Molar Mass.</li>
+
+<li>Coefficients give mole ratios.</li>
+
+</ul>
+
+`
+
 },
+
 
 4: {
-    title: "Chapter 4: Electrochemistry",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Electrochemistry will be added here.</p>`
+
+title: "Chapter 4: Electrochemistry",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+Electrochemistry is the study of chemical reactions
+involving the transfer of electrons and the relationship
+between chemical and electrical energy.
+
+</p>
+
+<h3>📌 Important Terms</h3>
+
+<ul>
+
+<li>Oxidation</li>
+
+<li>Reduction</li>
+
+<li>Electrode</li>
+
+<li>Electrolyte</li>
+
+<li>Electrochemical cell</li>
+
+</ul>
+
+<p>
+
+Detailed chapter notes will be expanded here.
+
+</p>
+
+`
+
 },
+
 
 5: {
-    title: "Chapter 5: Reaction Kinetics",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Reaction Kinetics will be added here.</p>`
+
+title: "Chapter 5: Reaction Kinetics",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+Reaction kinetics is the study of the rate at which
+chemical reactions occur and the factors that affect
+the reaction rate.
+
+</p>
+
+<h3>📌 Factors Affecting Reaction Rate</h3>
+
+<ul>
+
+<li>Temperature</li>
+
+<li>Concentration</li>
+
+<li>Surface area</li>
+
+<li>Catalyst</li>
+
+</ul>
+
+`
+
 },
+
 
 6: {
-    title: "Chapter 6: Salts",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Salts will be added here.</p>`
+
+title: "Chapter 6: Salts",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+Salts are ionic compounds that can be formed through
+different chemical reactions involving acids and bases.
+
+</p>
+
+<h3>📌 Important Topics</h3>
+
+<ul>
+
+<li>Formation of salts</li>
+
+<li>Properties of salts</li>
+
+<li>Solubility</li>
+
+<li>Uses of salts</li>
+
+</ul>
+
+`
+
 },
+
 
 7: {
-    title: "Chapter 7: Nitrogen, Sulphur and Metals",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Nitrogen, Sulphur and Metals will be added here.</p>`
+
+title: "Chapter 7: Nitrogen, Sulphur and Metals",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+This chapter deals with important properties and chemical
+behaviour of nitrogen, sulphur and metals.
+
+</p>
+
+<h3>📌 Important Topics</h3>
+
+<ul>
+
+<li>Properties of nitrogen</li>
+
+<li>Properties of sulphur</li>
+
+<li>Properties of metals</li>
+
+<li>Important compounds</li>
+
+</ul>
+
+`
+
 },
+
 
 8: {
-    title: "Chapter 8: Organic Chemistry",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Organic Chemistry will be added here.</p>`
+
+title: "Chapter 8: Organic Chemistry",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+Organic chemistry is the branch of chemistry concerned
+mainly with carbon-containing compounds.
+
+</p>
+
+<h3>📌 Important Topics</h3>
+
+<ul>
+
+<li>Carbon compounds</li>
+
+<li>Organic molecules</li>
+
+<li>Functional groups</li>
+
+<li>Homologous series</li>
+
+</ul>
+
+`
+
 },
+
 
 9: {
-    title: "Chapter 9: Hydrocarbons",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Hydrocarbons will be added here.</p>`
+
+title: "Chapter 9: Hydrocarbons",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+Hydrocarbons are organic compounds composed only of
+carbon and hydrogen.
+
+</p>
+
+<h3>📌 Important Topics</h3>
+
+<ul>
+
+<li>Alkanes</li>
+
+<li>Alkenes</li>
+
+<li>Alkynes</li>
+
+<li>Properties of hydrocarbons</li>
+
+</ul>
+
+`
+
 },
+
 
 10: {
-    title: "Chapter 10: Hydroxy Compounds",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Hydroxy Compounds will be added here.</p>`
+
+title: "Chapter 10: Hydroxy Compounds",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+Hydroxy compounds contain a hydroxyl group and include
+important classes of organic compounds.
+
+</p>
+
+<h3>📌 Important Topics</h3>
+
+<ul>
+
+<li>Hydroxyl group</li>
+
+<li>Alcohols</li>
+
+<li>Properties of alcohols</li>
+
+<li>Uses of hydroxy compounds</li>
+
+</ul>
+
+`
+
 },
+
 
 11: {
-    title: "Chapter 11: Carboxylic Compounds",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Carboxylic Compounds will be added here.</p>`
+
+title: "Chapter 11: Carboxylic Compounds",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+Carboxylic compounds include compounds containing the
+carboxyl functional group.
+
+</p>
+
+<h3>📌 Important Topics</h3>
+
+<ul>
+
+<li>Carboxyl group</li>
+
+<li>Carboxylic acids</li>
+
+<li>Properties</li>
+
+<li>Uses</li>
+
+</ul>
+
+`
+
 },
+
 
 12: {
-    title: "Chapter 12: Polymers",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Polymers will be added here.</p>`
+
+title: "Chapter 12: Polymers",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+Polymers are large molecules made from repeating smaller
+units called monomers.
+
+</p>
+
+<h3>📌 Important Topics</h3>
+
+<ul>
+
+<li>Monomers</li>
+
+<li>Polymers</li>
+
+<li>Polymerization</li>
+
+<li>Natural polymers</li>
+
+<li>Synthetic polymers</li>
+
+</ul>
+
+`
+
 },
 
+
 13: {
-    title: "Chapter 13: Biochemistry",
-    content: `<h3>Chapter Notes</h3><p>Complete original notes for Biochemistry will be added here.</p>`
+
+title: "Chapter 13: Biochemistry",
+
+content: `
+
+<h3>📖 Notes</h3>
+
+<p>
+
+Biochemistry is the study of chemical substances and
+processes that occur in living organisms.
+
+</p>
+
+<h3>📌 Important Biomolecules</h3>
+
+<ul>
+
+<li>Carbohydrates</li>
+
+<li>Proteins</li>
+
+<li>Lipids</li>
+
+<li>Nucleic acids</li>
+
+</ul>
+
+`
+
 }
+
 
 };
 
@@ -696,39 +1787,43 @@ const chapters = {
 
 function openChapter(number) {
 
-    const notesArea = document.getElementById("notesArea");
+const notesArea = document.getElementById("notesArea");
 
-    const notesTitle = document.getElementById("notesTitle");
+const notesTitle = document.getElementById("notesTitle");
 
-    const notesContent = document.getElementById("notesContent");
+const notesContent = document.getElementById("notesContent");
 
-    notesTitle.innerHTML = chapters[number].title;
+notesTitle.innerHTML = chapters[number].title;
 
-    notesContent.innerHTML = chapters[number].content;
+notesContent.innerHTML = chapters[number].content;
 
-    notesArea.classList.add("active");
+notesArea.classList.add("active");
 
-    notesArea.scrollIntoView({
-        behavior: "smooth"
-    });
+notesArea.scrollIntoView({
+
+behavior: "smooth"
+
+});
 
 }
 
 
-/* CLOSE CHAPTER */
+/* CLOSE NOTES */
 
 function closeNotes() {
 
-    document
-    .getElementById("notesArea")
-    .classList
-    .remove("active");
+document
+.getElementById("notesArea")
+.classList
+.remove("active");
 
-    document
-    .getElementById("chapters")
-    .scrollIntoView({
-        behavior: "smooth"
-    });
+document
+.getElementById("chapters")
+.scrollIntoView({
+
+behavior: "smooth"
+
+});
 
 }
 
@@ -737,35 +1832,37 @@ function closeNotes() {
 
 function searchChapters() {
 
-    let input = document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase();
+let input = document
+.getElementById("searchInput")
+.value
+.toLowerCase();
 
-    let cards = document
-        .querySelectorAll(".chapter-card");
+let cards = document
+.querySelectorAll(".chapter-card");
 
-    cards.forEach(function(card) {
+cards.forEach(function(card) {
 
-        let text = card
-            .innerText
-            .toLowerCase();
+let text = card
+.innerText
+.toLowerCase();
 
-        if (text.includes(input)) {
+if(text.includes(input)) {
 
-            card.style.display = "";
+card.style.display = "";
 
-        } else {
+} else {
 
-            card.style.display = "none";
+card.style.display = "none";
 
-        }
+}
 
-    });
+});
 
 }
 
 </script>
 
+
 </body>
+
 </html>
