@@ -4,19 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Imad Notes | 9th & 10th Class Notes</title>
+<title>Imad Notes | FBISE 10th Class Chemistry</title>
 
 <style>
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
     background: #f5f7fb;
     color: #172033;
+    line-height: 1.6;
 }
 
 /* HEADER */
@@ -24,7 +29,7 @@ header {
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: white;
     text-align: center;
-    padding: 45px 20px;
+    padding: 55px 20px;
 }
 
 header h1 {
@@ -36,14 +41,14 @@ header p {
     font-size: 17px;
 }
 
-/* NAVIGATION */
+/* NAV */
 nav {
     background: white;
     padding: 15px;
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     box-shadow: 0 3px 15px rgba(0,0,0,0.08);
 }
 
@@ -51,109 +56,102 @@ nav a {
     color: #2563eb;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 12px;
+    margin: 0 10px;
 }
 
 /* HERO */
 .hero {
-    text-align: center;
-    padding: 70px 20px;
     background: white;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .hero h2 {
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 15px;
 }
 
-.hero h2 span {
+.hero span {
     color: #2563eb;
 }
 
 .hero p {
-    max-width: 650px;
+    max-width: 700px;
     margin: auto;
-    line-height: 1.7;
     color: #667085;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 25px;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
 }
 
 /* SEARCH */
 .search {
     text-align: center;
-    padding: 35px 20px;
+    padding: 30px 20px;
 }
 
 .search input {
     width: 90%;
-    max-width: 550px;
+    max-width: 650px;
     padding: 16px;
     border: 1px solid #ddd;
     border-radius: 12px;
     font-size: 16px;
 }
 
-/* SECTIONS */
-section {
+/* MAIN */
+.container {
     max-width: 1100px;
     margin: auto;
-    padding: 55px 20px;
+    padding: 50px 20px;
 }
 
 .title {
     text-align: center;
     font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #667085;
     margin-bottom: 35px;
 }
 
-/* CARDS */
-.cards {
+/* CHAPTER GRID */
+.chapters {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
 }
 
-.card {
+.chapter-card {
     background: white;
-    padding: 28px;
+    padding: 25px;
     border-radius: 18px;
-    text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.07);
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-6px);
+.chapter-card:hover {
+    transform: translateY(-5px);
 }
 
-.icon {
-    font-size: 45px;
-    margin-bottom: 12px;
+.chapter-number {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 13px;
 }
 
-.card h3 {
-    margin-bottom: 10px;
+.chapter-card h3 {
+    margin: 8px 0;
 }
 
-.card p {
+.chapter-card p {
     color: #667085;
-    line-height: 1.5;
     font-size: 14px;
 }
 
-.card button {
-    margin-top: 18px;
-    padding: 11px 20px;
+.chapter-card button {
+    margin-top: 15px;
+    padding: 11px 18px;
     border: none;
     border-radius: 8px;
     background: #2563eb;
@@ -162,19 +160,61 @@ section {
     cursor: pointer;
 }
 
+/* NOTES AREA */
+.notes-area {
+    display: none;
+    background: white;
+    padding: 35px;
+    margin-top: 45px;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.notes-area.active {
+    display: block;
+}
+
+.notes-area h2 {
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.notes-area h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.notes-area p {
+    margin-bottom: 12px;
+}
+
+.notes-area ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    margin-top: 25px;
+    padding: 11px 18px;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 /* ABOUT */
 .about {
-    max-width: none;
     background: #111827;
     color: white;
     text-align: center;
+    padding: 55px 20px;
 }
 
 .about p {
     max-width: 700px;
     margin: auto;
     color: #d1d5db;
-    line-height: 1.8;
 }
 
 /* FOOTER */
@@ -190,19 +230,23 @@ footer span {
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
+@media(max-width:600px) {
 
     header h1 {
-        font-size: 32px;
+        font-size: 31px;
     }
 
     .hero h2 {
-        font-size: 28px;
+        font-size: 27px;
+    }
+
+    .notes-area {
+        padding: 22px;
     }
 
     nav a {
         font-size: 13px;
-        margin: 0 5px;
+        margin: 0 4px;
     }
 }
 </style>
@@ -210,188 +254,353 @@ footer span {
 
 <body>
 
-<!-- HEADER -->
 <header>
     <h1>📚 Imad Notes</h1>
-    <p>9th & 10th Class Notes — Learn. Prepare. Succeed.</p>
+    <p>FBISE 10th Class Chemistry Notes</p>
 </header>
 
-<!-- NAVIGATION -->
 <nav>
     <a href="#home">Home</a>
-    <a href="#class9">9th Class</a>
-    <a href="#class10">10th Class</a>
+    <a href="#chapters">Chapters</a>
     <a href="#about">About</a>
 </nav>
 
-<!-- HERO -->
-<div class="hero" id="home">
+<section class="hero" id="home">
 
-    <h2>Welcome to <span>Imad Notes</span></h2>
+    <h2>10th Class <span>Chemistry Notes</span></h2>
 
     <p>
-        Welcome to Imad Notes, an educational platform created and managed by Imad.
-        Here you can find useful study material and notes for 9th and 10th class students.
+        Welcome to Imad Notes. Explore chapter-wise Chemistry
+        study material for FBISE 10th Class students.
     </p>
 
-    <a href="#class9" class="btn">Explore Notes</a>
+</section>
 
-</div>
-
-<!-- SEARCH -->
 <div class="search">
 
     <input
         type="text"
         id="searchInput"
-        placeholder="🔍 Search subject..."
-        onkeyup="searchNotes()"
+        placeholder="🔍 Search a chapter..."
+        onkeyup="searchChapters()"
     >
 
 </div>
 
-<!-- 9TH CLASS -->
-<section id="class9">
+<main class="container" id="chapters">
 
-    <h2 class="title">📘 9th Class Notes</h2>
+    <h2 class="title">🧪 Chemistry Chapters</h2>
 
-    <div class="cards">
+    <p class="subtitle">
+        FBISE 10th Class — Select a chapter to view notes.
+    </p>
 
-        <div class="card">
-            <div class="icon">🔬</div>
-            <h3>Physics</h3>
-            <p>9th Class Physics notes and important topics.</p>
-            <button onclick="showMessage('9th Class Physics notes will be added soon!')">
-                View Notes
-            </button>
+    <div class="chapters">
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 01</div>
+            <h3>History of Chemistry</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(1)">View Notes</button>
         </div>
 
-        <div class="card">
-            <div class="icon">🧪</div>
-            <h3>Chemistry</h3>
-            <p>9th Class Chemistry notes and exam preparation.</p>
-            <button onclick="showMessage('9th Class Chemistry notes will be added soon!')">
-                View Notes
-            </button>
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 02</div>
+            <h3>Matter</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(2)">View Notes</button>
         </div>
 
-        <div class="card">
-            <div class="icon">💻</div>
-            <h3>Computer</h3>
-            <p>9th Class Computer Science notes.</p>
-            <button onclick="showMessage('9th Class Computer notes will be added soon!')">
-                View Notes
-            </button>
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 03</div>
+            <h3>Stoichiometry</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(3)">View Notes</button>
         </div>
 
-        <div class="card">
-            <div class="icon">📖</div>
-            <h3>English</h3>
-            <p>English grammar and important study material.</p>
-            <button onclick="showMessage('9th Class English notes will be added soon!')">
-                View Notes
-            </button>
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 04</div>
+            <h3>Electrochemistry</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(4)">View Notes</button>
+        </div>
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 05</div>
+            <h3>Reaction Kinetics</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(5)">View Notes</button>
+        </div>
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 06</div>
+            <h3>Salts</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(6)">View Notes</button>
+        </div>
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 07</div>
+            <h3>Nitrogen, Sulphur and Metals</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(7)">View Notes</button>
+        </div>
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 08</div>
+            <h3>Organic Chemistry</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(8)">View Notes</button>
+        </div>
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 09</div>
+            <h3>Hydrocarbons</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(9)">View Notes</button>
+        </div>
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 10</div>
+            <h3>Hydroxy Compounds</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(10)">View Notes</button>
+        </div>
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 11</div>
+            <h3>Carboxylic Compounds</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(11)">View Notes</button>
+        </div>
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 12</div>
+            <h3>Polymers</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(12)">View Notes</button>
+        </div>
+
+        <div class="chapter-card">
+            <div class="chapter-number">CHAPTER 13</div>
+            <h3>Biochemistry</h3>
+            <p>Explore notes, concepts and exam preparation material.</p>
+            <button onclick="openChapter(13)">View Notes</button>
         </div>
 
     </div>
 
-</section>
 
-<!-- 10TH CLASS -->
-<section id="class10">
+    <!-- NOTES DISPLAY -->
 
-    <h2 class="title">📕 10th Class Notes</h2>
+    <div id="notesArea" class="notes-area">
 
-    <div class="cards">
+        <h2 id="notesTitle"></h2>
 
-        <div class="card">
-            <div class="icon">🔬</div>
-            <h3>Physics</h3>
-            <p>10th Class Physics notes and important questions.</p>
-            <button onclick="showMessage('10th Class Physics notes will be added soon!')">
-                View Notes
-            </button>
-        </div>
+        <div id="notesContent"></div>
 
-        <div class="card">
-            <div class="icon">🧪</div>
-            <h3>Chemistry</h3>
-            <p>10th Class Chemistry notes for exam preparation.</p>
-            <button onclick="showMessage('10th Class Chemistry notes will be added soon!')">
-                View Notes
-            </button>
-        </div>
-
-        <div class="card">
-            <div class="icon">💻</div>
-            <h3>Computer</h3>
-            <p>10th Class Computer Science notes.</p>
-            <button onclick="showMessage('10th Class Computer notes will be added soon!')">
-                View Notes
-            </button>
-        </div>
-
-        <div class="card">
-            <div class="icon">📖</div>
-            <h3>English</h3>
-            <p>English grammar and exam preparation.</p>
-            <button onclick="showMessage('10th Class English notes will be added soon!')">
-                View Notes
-            </button>
-        </div>
+        <button class="back-button" onclick="closeNotes()">
+            ← Back to Chapters
+        </button>
 
     </div>
 
-</section>
+</main>
 
-<!-- ABOUT -->
+
 <section class="about" id="about">
 
-    <h2 class="title">About Imad Notes</h2>
+    <h2>About Imad Notes</h2>
 
     <p>
         Imad Notes is an educational platform created and managed by Imad.
-        Our goal is to provide useful and easy-to-understand study material
-        for 9th and 10th class students.
+        Our goal is to provide students with easy-to-understand,
+        original and exam-focused study resources.
     </p>
 
 </section>
 
-<!-- FOOTER -->
+
 <footer>
 
-    <p>© 2026 <span>Imad Notes</span>. All Rights Reserved.</p>
+    <p>
+        © 2026 <span>Imad Notes</span>. All Rights Reserved.
+    </p>
 
-    <p>Website Owner: Imad</p>
+    <p>
+        Website Owner: Imad
+    </p>
 
 </footer>
 
+
 <script>
 
-function showMessage(message) {
-    alert(message);
+/* CHAPTER DATA */
+
+const chapters = {
+
+1: {
+    title: "Chapter 1: History of Chemistry",
+    content: `
+    <h3>Notes</h3>
+    <p>
+    Complete original notes for this chapter will be added here.
+    </p>
+
+    <h3>Important Definitions</h3>
+    <p>
+    Important terms and definitions will be presented here
+    in an easy-to-understand format.
+    </p>
+
+    <h3>Short Questions</h3>
+    <p>
+    Important short questions and answers will be added here.
+    </p>
+
+    <h3>Long Questions</h3>
+    <p>
+    Important long questions and detailed answers will be added here.
+    </p>
+
+    <h3>MCQs</h3>
+    <p>
+    Chapter-wise MCQs will be added here.
+    </p>
+    `
+},
+
+2: {
+    title: "Chapter 2: Matter",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Matter will be added here.</p>`
+},
+
+3: {
+    title: "Chapter 3: Stoichiometry",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Stoichiometry will be added here.</p>`
+},
+
+4: {
+    title: "Chapter 4: Electrochemistry",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Electrochemistry will be added here.</p>`
+},
+
+5: {
+    title: "Chapter 5: Reaction Kinetics",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Reaction Kinetics will be added here.</p>`
+},
+
+6: {
+    title: "Chapter 6: Salts",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Salts will be added here.</p>`
+},
+
+7: {
+    title: "Chapter 7: Nitrogen, Sulphur and Metals",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Nitrogen, Sulphur and Metals will be added here.</p>`
+},
+
+8: {
+    title: "Chapter 8: Organic Chemistry",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Organic Chemistry will be added here.</p>`
+},
+
+9: {
+    title: "Chapter 9: Hydrocarbons",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Hydrocarbons will be added here.</p>`
+},
+
+10: {
+    title: "Chapter 10: Hydroxy Compounds",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Hydroxy Compounds will be added here.</p>`
+},
+
+11: {
+    title: "Chapter 11: Carboxylic Compounds",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Carboxylic Compounds will be added here.</p>`
+},
+
+12: {
+    title: "Chapter 12: Polymers",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Polymers will be added here.</p>`
+},
+
+13: {
+    title: "Chapter 13: Biochemistry",
+    content: `<h3>Chapter Notes</h3><p>Complete original notes for Biochemistry will be added here.</p>`
 }
 
-function searchNotes() {
+};
+
+
+/* OPEN CHAPTER */
+
+function openChapter(number) {
+
+    const notesArea = document.getElementById("notesArea");
+
+    const notesTitle = document.getElementById("notesTitle");
+
+    const notesContent = document.getElementById("notesContent");
+
+    notesTitle.innerHTML = chapters[number].title;
+
+    notesContent.innerHTML = chapters[number].content;
+
+    notesArea.classList.add("active");
+
+    notesArea.scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* CLOSE CHAPTER */
+
+function closeNotes() {
+
+    document
+    .getElementById("notesArea")
+    .classList
+    .remove("active");
+
+    document
+    .getElementById("chapters")
+    .scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* SEARCH */
+
+function searchChapters() {
 
     let input = document
         .getElementById("searchInput")
         .value
         .toLowerCase();
 
-    let cards = document.querySelectorAll(".card");
+    let cards = document
+        .querySelectorAll(".chapter-card");
 
     cards.forEach(function(card) {
 
-        let subject = card
-            .querySelector("h3")
+        let text = card
             .innerText
             .toLowerCase();
 
-        if (subject.includes(input)) {
-            card.style.display = "block";
+        if (text.includes(input)) {
+
+            card.style.display = "";
+
         } else {
+
             card.style.display = "none";
+
         }
 
     });
