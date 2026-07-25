@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Imad Notes | 9th & 10th Class Notes</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* NAVIGATION */
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+nav a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: white;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero h2 span {
+    color: #2563eb;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+    color: #667085;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 25px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* SEARCH */
+.search {
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.search input {
+    width: 90%;
+    max-width: 550px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #667085;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.card button {
+    margin-top: 18px;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ABOUT */
+.about {
+    max-width: none;
+    background: #111827;
+    color: white;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #d1d5db;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    background: #0b1120;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer span {
+    color: #60a5fa;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 0 5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>📚 Imad Notes</h1>
+    <p>9th & 10th Class Notes — Learn. Prepare. Succeed.</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#class9">9th Class</a>
+    <a href="#class10">10th Class</a>
+    <a href="#about">About</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+
+    <h2>Welcome to <span>Imad Notes</span></h2>
+
+    <p>
+        Welcome to Imad Notes, an educational platform created and managed by Imad.
+        Here you can find useful study material and notes for 9th and 10th class students.
+    </p>
+
+    <a href="#class9" class="btn">Explore Notes</a>
+
+</div>
+
+<!-- SEARCH -->
+<div class="search">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search subject..."
+        onkeyup="searchNotes()"
+    >
+
+</div>
+
+<!-- 9TH CLASS -->
+<section id="class9">
+
+    <h2 class="title">📘 9th Class Notes</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🔬</div>
+            <h3>Physics</h3>
+            <p>9th Class Physics notes and important topics.</p>
+            <button onclick="showMessage('9th Class Physics notes will be added soon!')">
+                View Notes
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧪</div>
+            <h3>Chemistry</h3>
+            <p>9th Class Chemistry notes and exam preparation.</p>
+            <button onclick="showMessage('9th Class Chemistry notes will be added soon!')">
+                View Notes
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Computer</h3>
+            <p>9th Class Computer Science notes.</p>
+            <button onclick="showMessage('9th Class Computer notes will be added soon!')">
+                View Notes
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">📖</div>
+            <h3>English</h3>
+            <p>English grammar and important study material.</p>
+            <button onclick="showMessage('9th Class English notes will be added soon!')">
+                View Notes
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 10TH CLASS -->
+<section id="class10">
+
+    <h2 class="title">📕 10th Class Notes</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🔬</div>
+            <h3>Physics</h3>
+            <p>10th Class Physics notes and important questions.</p>
+            <button onclick="showMessage('10th Class Physics notes will be added soon!')">
+                View Notes
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧪</div>
+            <h3>Chemistry</h3>
+            <p>10th Class Chemistry notes for exam preparation.</p>
+            <button onclick="showMessage('10th Class Chemistry notes will be added soon!')">
+                View Notes
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Computer</h3>
+            <p>10th Class Computer Science notes.</p>
+            <button onclick="showMessage('10th Class Computer notes will be added soon!')">
+                View Notes
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">📖</div>
+            <h3>English</h3>
+            <p>English grammar and exam preparation.</p>
+            <button onclick="showMessage('10th Class English notes will be added soon!')">
+                View Notes
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2 class="title">About Imad Notes</h2>
+
+    <p>
+        Imad Notes is an educational platform created and managed by Imad.
+        Our goal is to provide useful and easy-to-understand study material
+        for 9th and 10th class students.
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>© 2026 <span>Imad Notes</span>. All Rights Reserved.</p>
+
+    <p>Website Owner: Imad</p>
+
+</footer>
+
+<script>
+
+function showMessage(message) {
+    alert(message);
+}
+
+function searchNotes() {
+
+    let input = document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(function(card) {
+
+        let subject = card
+            .querySelector("h3")
+            .innerText
+            .toLowerCase();
+
+        if (subject.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
